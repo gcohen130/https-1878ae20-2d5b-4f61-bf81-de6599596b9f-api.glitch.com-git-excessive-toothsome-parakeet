@@ -121,15 +121,17 @@
     </footer>
 
     <script type="text/javascript">
+      // initialize the interaction here, because the body content has been loaded 
+      // and we can access it
       OurCup.scrolling.initialize();
       OurCup.app.initialize();
     </script>
-
     
-    <script type="text/javsacript">
-      // this is a placeholder where you would want to add in any JS code you get from an analytics tracker
+    <script type="text/javascript">
+      // This is a placeholder where you would want to add in any JS code you get 
+      // from an analytics tracker. It is _not_ included in the head tag because you
+      // don't want it to slow down page content loading.
     </script>
-    <!-- End Matomo Code -->
 
   </body>
 
