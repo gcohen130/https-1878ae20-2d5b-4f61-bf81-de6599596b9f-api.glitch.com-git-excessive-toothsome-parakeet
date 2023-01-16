@@ -1,32 +1,56 @@
-/******************************************************************************
-START Glitch hello-app default styles
-
-The styles in this section do some minimal CSS resets, set default fonts and 
-colors, and handle the layout for our footer and "Remix on Glitch" button. If
-you're new to CSS they may seem a little complicated, but you can scroll down
-to this section's matching END comment to see page-specific styles.
-******************************************************************************/
-
-
-/* 
-  The style rules specify elements by type and by attributes such as class and ID
-  Each section indicates an element or elements, then lists the style properties to apply
-  See if you can cross-reference the rules in this file with the elements in index.html
+/** 
+ * The style rules specify elements by type and by attributes such 
+ * as class and ID. Each section indicates an element or elements, 
+ * then lists the style properties to apply. You can cross-reference
+ * the rules in this file with the elements in index.html
 */
 
-/* Our default values set as CSS variables */
+/**
+ * CSS variables let you put things like brand colors and fonts in
+ * one place, so you don't mistype them
+ */
 :root {
-  --color-bg: #69F7BE;
-  --color-text-main: #000000;
-  --color-primary: #FFFF00;
-  --wrapper-height: 87vh;
-  --image-max-width: 300px;
-  --image-margin: 3rem;
-  --font-family: "HK Grotesk";
-  --font-family-header: "HK Grotesk";
+  --color-bg: rgb(255,255,255); /** this is a color in red, green, and blue values (each from 0 to 255) **/
+  --color-text-main: rgb(0,0,0);
+  --color-primary: rgb(0,0,155);
+  --font-family-body: "Garamond", serif;
+  --font-family-header:  "Gill Sans", sans-serif;
 }
 
-/* Basic page style resets */
+
+/* Basic page style resets, building on the ones boostrap does */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: var(--font-family-body);
+  color: #471705;
+  font-size: 1.25rem;
+  background-color: var(--color-bg);
+}
+
+p.small {
+  font-size: 1rem;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  padding: 2rem;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+h1 {
+  color: #0044CC;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+
+
 * {
   box-sizing: border-box;
 }
