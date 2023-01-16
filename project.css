@@ -10,14 +10,17 @@
  * one place, so you don't mistype them
  */
 :root {
-  --color-bg: rgb(255,255,255); /** this is a color in red, green, and blue values (each from 0 to 255) **/
-  --color-text: rgb(0,0,0);
-  --color-primary: #0044CC;
-  --color-secondary: #0088CC;
+  --color-bg: rgb(
+    255,
+    255,
+    255
+  ); /** this is a color in red, green, and blue values (each from 0 to 255) **/
+  --color-text: rgb(0, 0, 0);
+  --color-primary: #0044cc;
+  --color-secondary: #0088cc;
   --font-family-body: "Garamond", serif;
-  --font-family-header:  "Gill Sans", sans-serif;
+  --font-family-header: "Gill Sans", sans-serif;
 }
-
 
 /* Basic page style resets, building on the ones boostrap does */
 body {
@@ -54,11 +57,13 @@ h3 {
   font-weight: bold;
 }
 
-em, i {
+em,
+i {
   color: --color-secondary;
 }
 
-a, a:hover {
+a,
+a:hover {
   color: --color-secondary;
 }
 
@@ -72,30 +77,29 @@ header p {
   font-size: 1.5rem;
 }
 
-
 /* main body, scrollytelling part styles */
 #scrolly {
-	position: relative;
+  position: relative;
 }
 
 article {
-	position: relative;
-	padding: 0;
-	max-width: 50rem;
-	margin: 0 auto;
+  position: relative;
+  padding: 0;
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 figure {
-	position: -webkit-sticky;
-	position: sticky;
-	left: 0;
-	width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  width: 100%;
   height: 100%;
-	margin: 0;
-	-webkit-transform: translate3d(0, 0, 0);
-	-moz-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-	z-index: 0;
+  margin: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  z-index: 0;
   background-color: #471705;
 }
 
@@ -109,17 +113,27 @@ figure img {
 }
 
 figure p {
-	text-align: center;
-	padding: 1rem;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-moz-transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	font-size: 8rem;
-	font-weight: 900;
-	color: var(--color-bg);
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  font-weight: 900;
+  color: var(--color-bg);
+}
+
+figcaption {
+  position: relative;
+  top: -2.5rem;
+  color: var(--color-bg);
+  background-color: rgba(255, 255, 255, 0.5); /* opacity is the 4th parameter */
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0 0.5rem;
 }
 
 .step {
@@ -127,27 +141,26 @@ figure p {
 }
 
 .step:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .step p {
   border-radius: 0.5rem;
-	text-align: center;
-	padding: 1rem;
-	font-size: 1.5rem;
-	background-color: var(--color-bg);
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: var(--color-bg);
   margin: 0 2rem;
 }
 
 .step.is-active p {
 }
 
-
 /* Footer styles */
 
 footer {
   color: var(--color-bg);
-  background-color: #0044CC;
+  background-color: #0044cc;
   padding: 5rem 0 1rem 0;
   text-align: center;
   font-size: 1rem;
