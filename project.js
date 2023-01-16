@@ -26,7 +26,7 @@ Project.scrolling = {
   initialize: () => {
     // grab the elements on the page that are related to the scrolling
     const scrollWrapper = document.getElementById("scrolly");
-    Project.scrolling.figure = scrollWrapper.getElementsByTagName("figure");
+    Project.scrolling.figure = scrollWrapper.getElementsByTagName("figure")[0];
     const article = scrollWrapper.getElementsByTagName('article')[0];
     Project.scrolling.steps = article.getElementsByClassName("step");
     // setup the default view to be the right size and include first step
@@ -46,10 +46,10 @@ Project.scrolling = {
 
   // call this to switch the background image
   setBackdropImage: (index) => {
-    Project.scrolling.figure.select("img")
-      .attr('src', Project.scrolling.backdrops[index].src)
-      .attr('class', 'fade-in');
-    document.getElementsByTagName("figcaption")[0].html(Project.scrolling.backdrops[index].credit)
+    const image = Project.scrolling.figure.getElementsByTagName("img")[0];
+    image.src = Project.scrolling.backdrops[index].src;
+    image.classList.add = 'fade-in';
+    document.getElementsByTagName("figcaption")[0].innerHTML = Project.scrolling.backdrops[index].credit;
   },
 
   // called by scrollama when the step is being entered
