@@ -22,14 +22,16 @@ Project.scrolling = {
     },
   ],
 
+  // set up the webpage to scroll
   initialize: () => {
     // grab the elements on the page that are related to the scrolling
-    const scollWrapper = document.getElementById("#scrolly");
-    Project.scrolling.figure = scollWrapper.getElementsByTagName("figure");
-    const article = scollWrapper.getElementsByTagName('article')[0];
-    Project.scrolling.steps = article.getElementsByClassName(".step");
-    Project.scrolling.handleResize();
-    Project.scrolling.setBackdropImage(0);
+    const scrollWrapper = document.getElementById("scrolly");
+    Project.scrolling.figure = scrollWrapper.getElementsByTagName("figure");
+    const article = scrollWrapper.getElementsByTagName('article')[0];
+    Project.scrolling.steps = article.getElementsByClassName("step");
+    // setup the default view to be the right size and include first step
+    //Project.scrolling.handleResize();
+    Project.scrolling.setBackdropImage(0); // remember: 0 means the first item in an array
     // intialize the scrollama helper
     Project.scrolling.scroller = scrollama();
     Project.scrolling.scroller
@@ -42,6 +44,7 @@ Project.scrolling = {
       .onStepExit(Project.scrolling.handleStepExit);
   },
 
+  // call this to switch the background image
   setBackdropImage: (index) => {
     Project.scrolling.figure.select("img")
       .attr('src', Project.scrolling.backdrops[index].src)
@@ -49,26 +52,31 @@ Project.scrolling = {
     document.getElementsByTagName("figcaption")[0].html(Project.scrolling.backdrops[index].credit)
   },
 
+  // called by scrollama when the step is being entered
   handleStepEnter: (stepInfo) => { // stepInfo = { element, directihandle, index }
-    // chandlesole.log(stepInfo);
+    // put an `is-active` class on the step that we switched to
     Project.scrolling.step.classed("is-active", (d, i) => i === stepInfo.index);
-    Project.scrolling.setBackdropImage(stepInfo.index)
+    // and switch the background image to match the step content
+    Project.scrolling.setBackdropImage(stepInfo.index);
   },
 
+  // called by scrollama when moving out of a step
   handleStepExit: (stepInfo) => {
+    // we don't do anything here
   },
 
+  // called to get content to be the right size to fit the device
   handleResize: () => {
     const stepH = Math.floor(window.innerHeight * 1); // update step heights
-    Project.scrolling.steps.style("height", stepH + "px");
+    for (const step in Project.scrolling.steps) {
+      step.style.height = stepH + "px";
+    }
     const figureHeight = window.innerHeight;
     const figureMarginTop = 0;
-    Project.scrolling.figure
-      .style("height", figureHeight + "px")
-      .style("top", figureMarginTop + "px");
-    Project.scrolling.figure.select(".wrapper")
-      .style("height", figureHeight + "px")
-    Project.scrolling.scroller.resize(); // tell scrollama to update new element dimensihandles
-  }
+    Project.scrolling.figure.style.height = figureHeight + "px";
+    Project.scrolling.figure.style.top = figureMarginTop + "px";
+    Project.scrolling.figure.getElementByClassName("wrapper").style.height = figureHeight + "px";
+    Project.scrolling.scroller.resize(); // tell scrollama to update new element dimensions
+  },
 
 };
