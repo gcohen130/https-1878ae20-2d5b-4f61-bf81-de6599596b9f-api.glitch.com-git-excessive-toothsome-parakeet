@@ -1,7 +1,10 @@
+<!-- tell the browser this is an HTML5 file -->
 <!DOCTYPE html>
 
+<!-- all the HTML must be inside this root html tag -->
 <html lang="en">
 
+  <!-- give the web browser a bunch of other information about this webpage, most of it not displayed to the user -->
   <head>
 
     <!-- tell the browser how to display text -->
@@ -18,11 +21,13 @@
     <!-- text that shows up in the browser tab -->
     <title>Scrollama + Boostrap Boilerplate</title>
 
+    <!-- INCLUDE CSS FILES -->
     <!-- pull in the bootstrap CSS files from the 3rd party CDN they are hosted on -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- pull in our own CSS rules -->
     <link rel="stylesheet" href="project.css" type="text/css" charset="utf-8" />
 
+    <!-- INCLUDE JS FILES -->
     <!-- use d3.js for easy DOM manipluation -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- pull in the Scrollama javscript package from the CDN hosting them -->
@@ -32,16 +37,16 @@
     <!-- pull in scripts we wrote for this example -->
     <script src="projects.js"></script>
     
-
   </head>
 
+  <!-- the body for the content the user is shown within a browser window -->
   <body>
 
     <!-- the header has a title and indication to the user that they should scroll -->
     <header>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 offset-lg-3">  <!-- half-width & centered on desktop/tablet, otherwise full width --> 
+      <div class="container"> <!-- tell bootstrap we're going to use a grid -->
+        <div class="row"> <!-- a horizontal set of content -->
+          <div class="col-lg-6 offset-lg-3">  <!-- half-width & centered on desktop/tablet, full width on mobile --> 
       			<h1>Scrollama + Boostrap Boilerplate</h1>
       			<p>
               This is a small example of how to create <i>scrollytelling</i> webpage with <a href="https://github.com/russellsamora/scrollama">scrollama.js</a> (for interactions) with <a href="https://getbootstrap.com">boostrap</a> (for styling).
@@ -90,22 +95,6 @@
               <a href="https://www.amnesty.org/en/latest/campaigns/2016/03/qatar-world-cup-of-shame/">significant evidence of abuse</a>.
             </p>
   				</div>
-  				<div class="step" data-step="4">
-  					<p>
-              But for many of the players, and fans, this is the chance of a lifetime.
-              So instead of celebrating Qatar and FIFA this year, let's focus on them.
-              Every World Cup fan has a story about the joys of connecting with someone from across the globe,
-              learning about their culture, community, and journey.
-            </p>
-  				</div>
-          <div class="step" data-step="4">
-  					<p>
-              Use the button below to find out who your neighbors are supporting.
-              Then get out there and taste their food, listen to their music, support their restaurants, and learn from their home.
-              Celebrate their cultures, instead of FIFA's corruption.
-              Make it <em>Our Cup</em>.
-            </p>
-  				</div>
   			</article>
   		</section>
 
@@ -113,9 +102,9 @@
 
     <!-- the footer is used to show credits -->
     <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
+      <div class="container">  <!-- tell bootstrap we're going to use a grid -->
+        <div class="row"> <!-- a horizontal set of content -->
+          <div class="col-12"> <!-- content layout full width on all devices -->
             <p>
                 A sample created by <a href="https://camd.northeastern.edu/faculty/rahul-bhargava/">Rahul Bhargava</a> at the
                 Northeastern University <a href="http://dataculture.northeastern.edu/">Data Culture Group</a>.
@@ -136,19 +125,9 @@
       OurCup.app.initialize();
     </script>
 
-    <!-- Matomo -->
-    <script>
-      var _paq = window._paq = window._paq || [];
-      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="//analytics.mediacloud.org/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
-        _paq.push(['setSiteId', '2']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-      })();
+    
+    <script type="text/javsacript">
+      // this is a placeholder where you would want to add in any JS code you get from an analytics tracker
     </script>
     <!-- End Matomo Code -->
 
