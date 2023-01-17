@@ -30,7 +30,7 @@ Project.scrolling = {
     const article = scrollWrapper.getElementsByTagName('article')[0];
     Project.scrolling.steps = article.getElementsByClassName("step");
     // setup the default view to be the right size and include first step
-    //Project.scrolling.handleResize();
+    Project.scrolling.handleResize();
     Project.scrolling.setBackdropImage(0); // remember: 0 means the first item in an array
     // intialize the scrollama helper
     Project.scrolling.scroller = scrollama();
@@ -49,13 +49,14 @@ Project.scrolling = {
     const image = Project.scrolling.figure.getElementsByTagName("img")[0];
     image.src = Project.scrolling.backdrops[index].src;
     image.classList.add = 'fade-in';
+    // TODO: make this caption text a link
     document.getElementsByTagName("figcaption")[0].innerHTML = Project.scrolling.backdrops[index].credit;
   },
 
   // called by scrollama when the step is being entered
   handleStepEnter: (stepInfo) => { // stepInfo = { element, directihandle, index }
-    // put an `is-active` class on the step that we switched to
-    Project.scrolling.step.classed("is-active", (d, i) => i === stepInfo.index);
+    console.log(`Switched to step ${stepInfo.index}`);
+    // TODO: add an `is-active` class on the step that we switched to (and remove from all others)
     // and switch the background image to match the step content
     Project.scrolling.setBackdropImage(stepInfo.index);
   },
@@ -68,7 +69,10 @@ Project.scrolling = {
   // called to get content to be the right size to fit the device
   handleResize: () => {
     const stepH = Math.floor(window.innerHeight * 1); // update step heights
-    for (const step in Project.scrolling.steps) {
+    for (const stepIdx in Project.scrolling.steps) {
+      console.log("idx"+stepIdx);
+      const step = Project.scrolling.steps[stepIdx];
+      console.log("step"+step);
       step.style.height = stepH + "px";
     }
     const figureHeight = window.innerHeight;
