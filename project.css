@@ -24,16 +24,9 @@
 
 /* Basic page style resets, building on the ones boostrap does */
 body {
-  margin: 0px;
-  padding: 0px;
   font-family: var(--font-family-body);
   color: var(--color-text);
-  font-size: 1.25rem;
   background-color: var(--color-bg);
-}
-
-p.small {
-  font-size: 1rem;
 }
 
 h1 {
@@ -76,6 +69,11 @@ header {
 header p {
   font-size: 1.5rem;
 }
+
+header p.small {
+  font-size: 1rem;
+}
+
 
 /* main body, scrollytelling part styles */
 #scrolly {
