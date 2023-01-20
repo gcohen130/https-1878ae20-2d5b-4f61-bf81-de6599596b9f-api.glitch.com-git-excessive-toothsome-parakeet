@@ -15,7 +15,7 @@ Project.scrolling = {
 
   // a list of the backdrop images, ordered so they match the `step` elements on the page
   backdrops: [
-    { 'src': 'https://cdn.glitch.global/60a947a3-a0d4-473b-a51a-ef7120e2f598/webcoding.jpeg?v=1673897542123',
+    { 'src': 'https://cdn.glitch.global/aac14626-81f5-4647-b387-19ea10dd1c3e/flower.jpeg?v=1674230117264',
       'credit': 'https://zapier.com/blog/learn-html-css/'
     },
     { 'src': 'https://cdn.glitch.global/60a947a3-a0d4-473b-a51a-ef7120e2f598/puppies.jpg?v=1673897599766',
