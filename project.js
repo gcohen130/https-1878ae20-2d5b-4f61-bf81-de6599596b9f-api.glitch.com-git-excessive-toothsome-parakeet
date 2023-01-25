@@ -15,20 +15,19 @@ Project.scrolling = {
   // a list of the backdrop images, ordered so they match the `step` elements on the page
   backdrops: [
     {
-      src: "https://cdn.glitch.global/aac14626-81f5-4647-b387-19ea10dd1c3e/flower.jpeg?v=1674230117264",
-      credit: "https://zapier.com/blog/learn-html-css/",
+      src: "https://cdn.glitch.global/97acdb46-a9d2-4dac-ad23-cb9e010ebc8f/C0007T01.JPG?v=1674670923119",
     },
     {
-      src: "https://cdn.glitch.global/aac14626-81f5-4647-b387-19ea10dd1c3e/espresso-coffee-cup-with-beans-on-table-restricted.jpeg?v=1674230466006"
+      src: "https://cdn.glitch.global/97acdb46-a9d2-4dac-ad23-cb9e010ebc8f/C0015T01.JPG?v=1674670927985"
     },
     {
-      src: "https://cdn.glitch.global/60a947a3-a0d4-473b-a51a-ef7120e2f598/puppies.jpg?v=1673897599766",
-      credit: "https://www.wisdompanel.com/en-us/blog/sibling-genetics-in-dogs",
+      src: "https://cdn.glitch.global/97acdb46-a9d2-4dac-ad23-cb9e010ebc8f/C0014T01.JPG?v=1674670927711",
     },
     {
-      src: "https://cdn.glitch.global/60a947a3-a0d4-473b-a51a-ef7120e2f598/kitten-vs-puppy.jpeg?v=1673897648888",
-      credit:
-        "https://www.marketwatch.com/story/owning-a-cat-vs-owning-a-dog-which-pet-makes-better-financial-sense-11649445375",
+      src: "https://cdn.glitch.global/97acdb46-a9d2-4dac-ad23-cb9e010ebc8f/C0018T01.JPG?v=1674670928328",
+    },
+    {
+      src: "https://cdn.glitch.global/97acdb46-a9d2-4dac-ad23-cb9e010ebc8f/C0026T01.JPG?v=1674671123934",
     },
   ],
 
