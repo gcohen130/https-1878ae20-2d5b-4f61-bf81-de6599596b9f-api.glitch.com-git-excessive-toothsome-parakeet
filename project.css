@@ -16,10 +16,10 @@
     255
   ); /** this is a color in red, green, and blue values (each from 0 to 255) **/
   --color-text: rgb(0, 0, 0);
-  --color-primary: #0044cc;
+  --color-primary: #00aeed;
   --color-secondary: #0088cc;
   --font-family-body: "Garamond", serif;
-  --font-family-header: "Gill Sans", sans-serif;
+  --font-family-header: "Mangal", sans-serif;
 }
 
 /* Basic page style resets, building on the ones boostrap does */
