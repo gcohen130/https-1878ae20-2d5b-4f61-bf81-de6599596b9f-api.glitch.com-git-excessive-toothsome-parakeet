@@ -3,27 +3,39 @@
 
 <!-- all the HTML must be inside this root html tag -->
 <html lang="en">
-
   <!-- give the web browser a bunch of other information about this webpage, most of it not displayed to the user -->
   <head>
-
     <!-- tell the browser how to display text -->
-    <meta charset="utf-8">
-    
+    <meta charset="utf-8" />
+
     <!-- give search engines some background info on this page -->
-    <meta name="description" content="Scrollama + Bootstrap Boilerplate - sample webpage to remix and build on for learners">
-    <meta name="keywords" content="digital storytelling, scrollytelling, learning, examples">
-    <meta name="author" content="Rahul Bhargava, Data Culture Group, Northeastern University">
+    <meta
+      name="description"
+      content="Scrollama + Bootstrap Boilerplate - sample webpage to remix and build on for learners"
+    />
+    <meta
+      name="keywords"
+      content="digital storytelling, scrollytelling, learning, examples"
+    />
+    <meta
+      name="author"
+      content="Rahul Bhargava, Data Culture Group, Northeastern University"
+    />
 
     <!-- tell the browser to render differently on mobile devices than in browsers on desktop machines -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- text that shows up in the browser tab -->
     <title>Scrollama + Boostrap Boilerplate</title>
 
     <!-- INCLUDE CSS FILES -->
     <!-- pull in the bootstrap CSS files from the 3rd party CDN they are hosted on -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
     <!-- pull in our own CSS rules -->
     <link rel="stylesheet" href="project.css" type="text/css" charset="utf-8" />
 
@@ -32,109 +44,142 @@
     <script src="https://unpkg.com/scrollama"></script>
     <!-- pull in scripts we wrote for this example -->
     <script src="project.js"></script>
-    
   </head>
 
   <!-- the body for the content the user is shown within a browser window -->
   <body>
-
     <!-- the header has a title and indication to the user that they should scroll -->
     <header>
-      <div class="container"> <!-- tell bootstrap we're going to use a grid -->
-        <div class="row"> <!-- a horizontal set of content -->
-          <div class="col-lg-6 offset-lg-3">  <!-- half-width & centered on desktop/tablet, full width on mobile --> 
-      			<h1>Tommy Rosa: </h1>
-            <h2>Faith and Family </h2>
-      			<p>
-              Where others see loss, the Rosas see hope. 
-      			</p>
-            <p class="small">
-              (scroll for more)
-            </p>
+      <div class="container">
+        <!-- tell bootstrap we're going to use a grid -->
+        <div class="row">
+          <!-- a horizontal set of content -->
+          <div class="col-lg-6 offset-lg-3">
+            <!-- half-width & centered on desktop/tablet, full width on mobile -->
+            <h1>Tommy Rosa:</h1>
+            <h2>Faith and Family</h2>
+            <p>Where others see loss, the Rosas see hope.</p>
+            <p class="small">(scroll for more)</p>
             <!-- glitch hosts "assets" like images on a CDN so they can be served up more efficiently... that means we get wacky URLs for them -->
-            <img src="https://cdn.glitch.global/60a947a3-a0d4-473b-a51a-ef7120e2f598/scroll-down.gif?v=1673894657673" alt="scroll down" height="100">
+            <img
+              src="https://cdn.glitch.global/60a947a3-a0d4-473b-a51a-ef7120e2f598/scroll-down.gif?v=1673894657673"
+              alt="scroll down"
+              height="100"
+            />
           </div>
         </div>
       </div>
-		</header>
+    </header>
 
     <!-- the main section has the body of the story -->
     <main>
-      <section id="scrolly"> <!-- there is only one of these, so give it an `id` instead of a `class` attribute -->
+      <section id="scrolly">
+        <!-- there is only one of these, so give it an `id` instead of a `class` attribute -->
 
-        <figure> <!-- a `figure` is a useful wrapper around images and captions -->
+        <figure>
+          <!-- a `figure` is a useful wrapper around images and captions -->
           <div class="wrapper">
-  				  <img id="backdrop-img"/>
+            <img id="backdrop-img" />
           </div>
           <figcaption></figcaption>
-  			</figure>
+        </figure>
 
-  			<article> <!-- a helpful tag to note content that is not related to the background site styling -->
-  				<div class="step" data-step="1">
-  					<p>
-              It would be easy for Tommy and Virginia Rosa to chalk up their story as one of loss. High school 
-              sweethearts separated by a family move, Tommy wrongfully convicted of homicide at 27, it wasn’t 
-              until nearly three decades into his sentence that they found each other again—and eight more years 
-              after that until he was released. While serving time for a crime he did not commit, Tommy lost his 
-              mother, brother, aunt, and oldest child to cancer at 21 years-old. But when they tell their story 
-              what they keep returning to is hope, faith, and family. 
+        <article>
+          <!-- a helpful tag to note content that is not related to the background site styling -->
+          <div class="step" data-step="1">
+            <p>
+              It would be easy for Tommy and Virginia Rosa to chalk up their
+              story as one of loss. High school sweethearts separated by a
+              family move, Tommy wrongfully convicted of homicide at 27, it
+              wasn’t until nearly three decades into his sentence that they
+              found each other again—and eight more years after that until he
+              was released. While serving time for a crime he did not commit,
+              Tommy lost his mother, brother, aunt, and oldest child to cancer
+              at 21 years-old. But when they tell their story what they keep
+              returning to is hope, faith, and family.
             </p>
-  				</div>
+          </div>
           <div class="step" data-step="2">
-  					<p>
-             They talk of support—supporting one another, support from friends and kin, but also the support 
-              they were able to lend others. Whether it was one of the nine wrongfully convicted persons Tommy 
-              helped get out or the inexperienced visitors who needed advice, instruction, or a different blouse 
-              to wear. 
+            <p>
+              They talk of support—supporting one another, support from friends
+              and kin, but also the support they were able to lend others.
+              Whether it was one of the nine wrongfully convicted persons Tommy
+              helped get out or the inexperienced visitors who needed advice,
+              instruction, or a different blouse to wear.
             </p>
-  				</div>
-  				<div class="step" data-step="3">
-  					<p>
-              In prison, Tommy didn’t care for therapists. If he was going to confide in anyone it would be the 
-              deacon, who knew how to talk to Tommy. Yet with a future full of only possibility, Tommy wants to 
-              be a counselor. With a nervous smile—half-toothless from cancer in his jaw—he says, “no one can 
-              tell me I can’t imagine what they’ve been through. If they’ve been through it, so have I.” 
-              (Paraphrasing—might be better served as a video clip) But instead of getting angry or frustrated or 
-              sour, Tommy wants to turn that pain into hope for others. 
+          </div>
+          <div class="step" data-step="3">
+            <p>
+              In prison, Tommy didn’t care for therapists. If he was going to
+              confide in anyone it would be the deacon, who knew how to talk to
+              Tommy. Yet with a future full of only possibility, Tommy wants to
+              be a counselor. With a nervous smile—half-toothless from cancer in
+              his jaw—he says, “no one can tell me I can’t imagine what they’ve
+              been through. If they’ve been through it, so have I.”
+              (Paraphrasing—might be better served as a video clip) But instead
+              of getting angry or frustrated or sour, Tommy wants to turn that
+              pain into hope for others.
             </p>
-  				</div>
-  				<div class="step" data-step="4">
-  					<p>
-             As Tommy and Virginia wait for his exoneration to come through, they can’t help but dream of the 
-              places they want to travel, the people they want to see, and the food they want to eat. Thye have 
-              family in Pennsylvania, Missouri and Puerto Rico. Virginia, who has taken up painting over the past 
-              two years, wants to go to Spain, France and Italy. Tommy just wants to be able to take in a game 
-              with his son—it doesn’t matter if it’s the Sox, Pats, or Bruins, he is a fan of it all. Virginia 
-              gives him a nudging elbow to the ribs, “maybe dinner and play.” 
+          </div>
+          <div class="step" data-step="4">
+            <p>
+              As Tommy and Virginia wait for his exoneration to come through,
+              they can’t help but dream of the places they want to travel, the
+              people they want to see, and the food they want to eat. Thye have
+              family in Pennsylvania, Missouri and Puerto Rico. Virginia, who
+              has taken up painting over the past two years, wants to go to
+              Spain, France and Italy. Tommy just wants to be able to take in a
+              game with his son—it doesn’t matter if it’s the Sox, Pats, or
+              Bruins, he is a fan of it all. Virginia gives him a nudging elbow
+              to the ribs, “maybe dinner and play.”
             </p>
-  				</div>
-          	<div class="step" data-step="5">
-  					<p>
-              Tommy jokes that sometimes Virginia loves him a little too much—he’s not a snuggler—but one can tell 
-              that she is at the core of everything important to him in his new life of freedom. They are a team, 
-              they are partners, and they would not be where they are today without the other. For what is family 
-              if not unbridled love, hope, and faith in each other. 
+          </div>
+          <div class="step" data-step="5">
+            <p>
+              Tommy jokes that sometimes Virginia loves him a little too
+              much—he’s not a snuggler—but one can tell that she is at the core
+              of everything important to him in his new life of freedom. They
+              are a team, they are partners, and they would not be where they
+              are today without the other. For what is family if not unbridled
+              love, hope, and faith in each other.
             </p>
-  				</div>
-  			</article>
-  		</section>
-
+          </div>
+        </article>
+      </section>
     </main>
 
     <!-- the footer is used to show credits -->
     <footer>
-      <div class="container">  <!-- tell bootstrap we're going to use a grid -->
-        <div class="row"> <!-- a horizontal set of content -->
-          <div class="col-12"> <!-- content layout full width on all devices -->
+      <div class="container">
+        <!-- tell bootstrap we're going to use a grid -->
+        <div class="row">
+          <!-- a horizontal set of content -->
+          <div class="col-12">
+            <!-- content layout full width on all devices -->
             <p>
-                A sample created by <a href="https://camd.northeastern.edu/faculty/rahul-bhargava/">Rahul Bhargava</a> at the
-                Northeastern University <a href="http://dataculture.northeastern.edu/">Data Culture Group</a>.
-                <br />
-                Source code on <a href="https://github.com/dataculturegroup/our-cup">GitHub</a>.
-                <br />
-                <a href="https://twitter.com/intent/tweet?screen_name=rahulbot" class="twitter-mention-button" data-size="large" data-dnt="true">Tweet to @rahulbot</a>.
-                <br />
-                <a href="https://vis.social/@rahulbot">Toot to @rahulbot@vis.social</a>.
+              A sample created by
+              <a href="https://camd.northeastern.edu/faculty/rahul-bhargava/"
+                >Rahul Bhargava</a
+              >
+              at the Northeastern University
+              <a href="http://dataculture.northeastern.edu/"
+                >Data Culture Group</a
+              >.
+              <br />
+              Source code on
+              <a href="https://github.com/dataculturegroup/our-cup">GitHub</a>.
+              <br />
+              <a
+                href="https://twitter.com/intent/tweet?screen_name=rahulbot"
+                class="twitter-mention-button"
+                data-size="large"
+                data-dnt="true"
+                >Tweet to @rahulbot</a
+              >.
+              <br />
+              <a href="https://vis.social/@rahulbot"
+                >Toot to @rahulbot@vis.social</a
+              >.
             </p>
           </div>
         </div>
@@ -142,17 +187,15 @@
     </footer>
 
     <script type="text/javascript">
-      // initialize the interaction here, because the body content has been loaded 
+      // initialize the interaction here, because the body content has been loaded
       // and we can access it
       Project.scrolling.initialize();
     </script>
-    
+
     <script type="text/javascript">
-      // This is a placeholder where you would want to add in any JS code you get 
+      // This is a placeholder where you would want to add in any JS code you get
       // from an analytics tracker. It is _not_ included in the head tag because you
       // don't want it to slow down page content loading.
     </script>
-
   </body>
-
 </html>
