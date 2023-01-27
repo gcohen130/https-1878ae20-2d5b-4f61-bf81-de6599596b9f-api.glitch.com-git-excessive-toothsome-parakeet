@@ -17,18 +17,6 @@ Project.scrolling = {
     {
       src: "https://cdn.glitch.global/97acdb46-a9d2-4dac-ad23-cb9e010ebc8f/C0007T01.JPG?v=1674670923119",
     },
-    {
-      src: "https://cdn.glitch.global/97acdb46-a9d2-4dac-ad23-cb9e010ebc8f/C0015T01.JPG?v=1674670927985"
-    },
-    {
-      src: "https://cdn.glitch.global/97acdb46-a9d2-4dac-ad23-cb9e010ebc8f/C0014T01.JPG?v=1674670927711",
-    },
-    {
-      src: "https://cdn.glitch.global/97acdb46-a9d2-4dac-ad23-cb9e010ebc8f/C0018T01.JPG?v=1674670928328",
-    },
-    {
-      src: "https://cdn.glitch.global/97acdb46-a9d2-4dac-ad23-cb9e010ebc8f/C0026T01.JPG?v=1674671123934",
-    },
   ],
 
   // set up the webpage to scroll
