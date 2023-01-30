@@ -11,7 +11,7 @@ Project.scrolling = {
   // these hold references to helpers and rendered page elements (filled in by `initialize`)
   scroller: undefined, // an instance of scrollama
   steps: undefined, // an array of all the step elements
-  wrapperElementId: 'scrolly', // RB: I put the id of the element that has steps in it here, so it is easy to change in one place
+  wrapperElementId: 'chapter-1', // RB: I put the id of the element that has steps in it here, so it is easy to change in one place
   
   // a list of the backdrop images, ordered so they match the `step` elements on the page
   backdrops: [
