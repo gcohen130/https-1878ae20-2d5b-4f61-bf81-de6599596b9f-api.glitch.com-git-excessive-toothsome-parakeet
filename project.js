@@ -25,15 +25,15 @@ Project.scroll1 = {
     // grab the elements on the page that are related to the scrolling
     const scrollWrapper = document.getElementById(Project.scroll1.wrapperElementId);
     Project.scroll1.figure = scrollWrapper.getElementsByTagName("figure")[0];
-    const article = scrollWrapper.getElementsByTagName("article")[0];
+   
     Project.scroll1.steps = Array.from(
-      article.getElementsByClassName("step")
+      scrollWrapper.getElementsByClassName("step")
     ); // convert from HTMLCollection to Array for ease of use later
     // intialize the scrollama helper
     Project.scroll1.scroller = scrollama();
     Project.scroll1.scroller
       .setup({
-        step: "#"+Project.scroll1.wrapperElementId+" article .step",
+        step: "#"+Project.scroll1.wrapperElementId+" .step",
         offset: 0.9,
         debug: false,
       })
@@ -85,6 +85,28 @@ Project.scroll1 = {
   },
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Project.scroll2 = {
   // these hold references to helpers and rendered page elements (filled in by `initialize`)
   scroller: undefined, // an instance of scrollama
@@ -103,15 +125,15 @@ Project.scroll2 = {
     // grab the elements on the page that are related to the scrolling
     const scrollWrapper = document.getElementById(Project.scroll2.wrapperElementId);
     Project.scroll2.figure = scrollWrapper.getElementsByTagName("figure")[0];
-    const article = scrollWrapper.getElementsByTagName("article")[0];
+    
     Project.scroll2.steps = Array.from(
-      article.getElementsByClassName("step")
+      scrollWrapper.getElementsByClassName("step")
     ); // convert from HTMLCollection to Array for ease of use later
     // intialize the scrollama helper
     Project.scroll2.scroller = scrollama();
     Project.scroll2.scroller
       .setup({
-        step: "#"+Project.scroll2.wrapperElementId+" article .step",
+        step: "#"+Project.scroll2.wrapperElementId+" .step",
         offset: 0.9,
         debug: false,
       })
