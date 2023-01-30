@@ -11,7 +11,8 @@ Project.scrolling = {
   // these hold references to helpers and rendered page elements (filled in by `initialize`)
   scroller: undefined, // an instance of scrollama
   steps: undefined, // an array of all the step elements
-
+  wrapperElementId: 'scrolly', // RB: I put the id of the element that has steps in it here, so it is easy to change in one place
+  
   // a list of the backdrop images, ordered so they match the `step` elements on the page
   backdrops: [
     {
@@ -20,10 +21,9 @@ Project.scrolling = {
   ],
 
   // set up the webpage to scroll
-  // RB: I changed this to accept the ID of the element that wraps all the steps for one scrolly chapter
-  initialize: (wrapperElementId) => {
+  initialize: () => {
     // grab the elements on the page that are related to the scrolling
-    const scrollWrapper = document.getElementById(wrapperElementId);
+    const scrollWrapper = document.getElementById(Project.scrolling.wrapperElementId);
     Project.scrolling.figure = scrollWrapper.getElementsByTagName("figure")[0];
     const article = scrollWrapper.getElementsByTagName("article")[0];
     Project.scrolling.steps = Array.from(
@@ -33,7 +33,7 @@ Project.scrolling = {
     Project.scrolling.scroller = scrollama();
     Project.scrolling.scroller
       .setup({
-        step: "#"+wrapperElementId+" article .step",
+        step: "#"+Project.scrolling.wrapperElementId+" article .step",
         offset: 0.9,
         debug: false,
       })
