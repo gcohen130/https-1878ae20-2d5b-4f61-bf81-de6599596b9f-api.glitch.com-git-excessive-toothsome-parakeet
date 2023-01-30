@@ -81,7 +81,8 @@
         </video>
       </div>
       
-      <section id="scrolly">
+      <section id="scrolly"> <!-- RB: here I think you want to use an id attribute indicating what "chapter" this is,
+                                  like <section id="chapter-1"> instead of "scrolly"  -->
         <!-- there is only one of these, so give it an `id` instead of a `class` attribute -->
 
         <figure>
@@ -91,7 +92,9 @@
           </div>
         </figure>
 
-        <article>
+        <article> <!-- RB: I'd move this open article tag to be outside this section, so it opens and 
+                           closes at the same place as the main tag... because in this case the whole page
+                           is the article -->
           <!-- a helpful tag to note content that is not related to the background site styling -->
           <div class="step" data-step="1">
             <p>
@@ -113,6 +116,8 @@
           </div>
         </article>
       </section>
+<!-- RB: seems like you're missing an open section tag here - I had suggested each "chapter" be wrapped by a section tag
+         so this one could be something like <section id="chapter-2"> -->
           <div class="step" data-step="3">
             <p>
               They talk of support—supporting one another, support from friends
@@ -204,7 +209,7 @@
     <script type="text/javascript">
       // initialize the interaction here, because the body content has been loaded
       // and we can access it
-      Project.scrolling.initialize();
+      Project.scrolling.initialize("scrolly");
     </script>
 
     <script type="text/javascript">

@@ -20,9 +20,10 @@ Project.scrolling = {
   ],
 
   // set up the webpage to scroll
-  initialize: () => {
+  // RB: I changed this to accept the ID of the element that wraps all the steps for one scrolly chapter
+  initialize: (wrapperElementId) => {
     // grab the elements on the page that are related to the scrolling
-    const scrollWrapper = document.getElementById("scrolly");
+    const scrollWrapper = document.getElementById(wrapperElementId);
     Project.scrolling.figure = scrollWrapper.getElementsByTagName("figure")[0];
     const article = scrollWrapper.getElementsByTagName("article")[0];
     Project.scrolling.steps = Array.from(
@@ -32,7 +33,7 @@ Project.scrolling = {
     Project.scrolling.scroller = scrollama();
     Project.scrolling.scroller
       .setup({
-        step: "#scrolly article .step",
+        step: "#"+wrapperElementId+" article .step",
         offset: 0.9,
         debug: false,
       })
@@ -49,6 +50,7 @@ Project.scrolling = {
     //image.src = Project.scrolling.backdrops[index].src;
     //image.classList.add = 'fade-in';
     // TODO: make this caption text a link
+    // RB: you aren't using <figcaption> tags to add credits to your images, so I think you can remove the next 2 lines of code
     document.getElementsByTagName("figcaption")[0].innerHTML =
       Project.scrolling.backdrops[index].credit;
   },
